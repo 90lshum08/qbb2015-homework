@@ -4,11 +4,14 @@ filename = "/Users/cmdb/qbb2015/stringtie/SRR072893/t_data.ctab"
 
 f = open( filename )
 
-for data in f:
-    # Split the line on whitespace
-    fields = data.split()
-    # Determine if the 9th column contains the string "tRNA"
-    if "tRNA" in fields[9]:
-        # The comma at the end suppresses the line, so that the output isn't double spaced
+# Iterate the file line by line
+for line_count, data in enumerate( f ):
+    # If line_count is below 10,do nothing
+    if line_count <= 10:
+        pass
+    # If line_count is between 11 and 15, print
+    elif line_count <= 15:
         print data,
-
+    # Don't read the entire document    
+    else:
+        break
