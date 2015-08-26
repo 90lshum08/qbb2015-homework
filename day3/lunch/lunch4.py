@@ -26,7 +26,7 @@ for line in rep:
     Data[1].append(line)
 
 for number in range(0, len(Data[1])):
-    Data[2].append((np.log2(Data[1][number]) - np.log(Data[0][number])))
+    Data[2].append((np.log2(Data[1][number]) - np.log2(Data[0][number])))
     Data[3].append(((np.log2((Data[1][number]) + np.log2(Data[0][number])))/2))
     
 M = Data[2]
