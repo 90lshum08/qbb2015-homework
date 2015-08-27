@@ -123,7 +123,7 @@ print BC
 print ABC
 
 plt.figure()
-v = venn3( subsets = (A, B, int(AB/2) , C, int(AC/2) , int(BC/2) , int(ABC/3) ), set_labels = ("CTCF", "BEAF", "Su(HW)"))   
+v = venn3( subsets = (A, B, AB , C, AC , BC , ABC ), set_labels = ("CTCF", "BEAF", "Su(HW)"))   
 plt.savefig("CTCF_BEAF_SuHWvenn.png")  
 
 
